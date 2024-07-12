@@ -2,6 +2,7 @@ const {signupUser} = require('../../application/use_cases/signupUser')
 const {loginUser} = require('../../application/use_cases/loginUser')
 
 function createAuthController(userRepository){
+    console.log("Reached to auth controllers");
     async function signup(req,res){
         try {
             console.log("Auth constroll signup:",req.body);

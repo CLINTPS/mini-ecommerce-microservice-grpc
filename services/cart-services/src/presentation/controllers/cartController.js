@@ -3,6 +3,7 @@ const {  getAllProducts } = require('../../infrastructure/grpc/productClient');
 const { getCartByUserId, saveCart } = require('../../infrastructure/repositories/cartRepository');
 
 const addToCartHandler = async (call, callback) => {
+    console.log("Reached to cart controller");
     const { userId, productId } = call.request;
     const products = await getAllProducts(productId)
     console.log('products got',products)

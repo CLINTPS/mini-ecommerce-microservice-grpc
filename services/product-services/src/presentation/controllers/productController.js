@@ -5,6 +5,7 @@ const {getProduct} = require('../../application/use_cases/getProductDetails')
 
 function createProductController(productRepository){
     async function add(req,res){
+        console.log("Reached to product controller");
         try {
             console.log('product body reached',req.body)
             const product = await addProduct(productRepository,req.body)
