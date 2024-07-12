@@ -32,7 +32,7 @@ app.post('/auth/signup', (req, res) => {
 });
 
 app.post('/auth/login', (req, res) => {
-    console.log('Login request reached in API gateway', req.body);
+    console.log('Login request reached in API gateway',req.body);
     authClient.login(req.body, (err, response) => {
         if (err) {
             res.status(500).send(err);

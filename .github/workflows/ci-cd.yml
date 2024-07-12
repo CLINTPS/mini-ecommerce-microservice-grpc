@@ -31,25 +31,25 @@ jobs:
         with:
           context: ./services/api-gateway
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/api-gateway:latest
+          tags: clintps/api-gateway:latest
 
       - name: Build and push auth-services
         uses: docker/build-push-action@v2
         with:
           context: ./services/auth-services
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/auth-services:latest
+          tags: clintps/auth-services:latest
 
       - name: Build and push product-services
         uses: docker/build-push-action@v2
         with:
           context: ./services/product-services
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/product-services:latest
+          tags: clintps/product-services:latest
 
       - name: Build and push cart-services
         uses: docker/build-push-action@v2
         with:
           context: ./services/cart-services
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/cart-services:latest
+          tags: clintps/cart-services:latest
