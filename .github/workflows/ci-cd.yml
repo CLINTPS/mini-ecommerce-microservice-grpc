@@ -26,12 +26,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and push api-gateway
+      - name: Build and push api-gateways
         uses: docker/build-push-action@v2
         with:
-          context: ./services/api-gateway
+          context: ./services/api-gateways
           push: true
-          tags: clintps/api-gateway:latest
+          tags: clintps/api-gateways:latest
 
       - name: Build and push auth-services
         uses: docker/build-push-action@v2
